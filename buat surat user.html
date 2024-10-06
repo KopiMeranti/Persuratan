@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link rel="stylesheet" href="dashboard.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  </head>
+  <style>
+    .navbar{
+      background-color: #ffffff;
+      border: 1px solid #2D83B6;
+      box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+      padding: 0;
+    }
+    .navbar img{
+      width: 190px;
+      margin-left: 20px;
+    }
+    .nav-link{
+        display: flex;
+        font-family: Arial, sans-serif;
+        font-weight: 700;
+        color: #015C93;
+        border-radius: 15px;
+        margin: 0 5px 0 5px;
+    }
+    .navbar-nav .nav-link:hover {
+        background-color: #2D83B6;
+        color: #ffffff;
+    }
+    .btn {
+    background: linear-gradient(90deg, #2D83B6 0%, #015C93 100%);
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 20px;
+    font-weight: bold;
+    transition: background-color 0.3s ease-in-out;
+    }
+
+    .btn:hover {
+        background-color: #014A70; /* Sedikit lebih gelap saat hover */
+    }
+    .btn {
+    transition: transform 0.2s ease, background-color 0.3s ease;
+    }
+
+    .btn:hover {
+        transform: scale(1.05);
+    }
+    .container {
+    display: flex;
+    flex-direction: column;
+    margin-top: 20vh;
+}
+
+.row {
+    width: 100%; /* Memastikan setiap baris mengambil seluruh lebar kontainer */
+    display: flex;
+    justify-content: center; /* Ini akan membuat baris konten di tengah secara horizontal */
+}
+
+    .fa-solid{
+        font-size: 50px;
+        color: #62CDD4;
+    }
+    .card{
+        box-shadow: 0 4px 2px rgba(0, 0, 0, 0.228);
+        margin: 10px;
+    }
+    .card .btn{
+        background-color: #2D83B6; 
+        border-radius: 10px; 
+        color: #ffffff;
+    }
+    .card .btn:hover{
+        background-color: #015C93;
+    }
+  </style>
+
+<body>
+    <nav class="navbar fixed-top navbar-expand-lg">
+        <div class="container-fluid justify-content-between">
+            <a class="navbar-brand" href="#">
+                <img src="logo web.png" alt="RETE MERANTI">
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#beranda" style="padding: 6px 20px;">Beranda</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="registrasi.html" style="padding: 6px 20px;">Registrasi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#tentang-kami" style="padding: 6px 20px;">Tentang Kami</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="btn nav-link" href="login.html"  style="background-color: #2D83B6; border-radius: 15px; color: #ffffff; padding: 6px 30px;">Masuk</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+<div class="container">
+  <div class="row">
+      <div class="col-md-3">
+          <div class="card">
+              <div class="card-body text-center">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <hr style="margin: 15px 0;">
+                  <p class="card-text" style="font-weight: 450; font-size: 17px;">Surat Keterangan Domisili</p>
+                  <a href="surat domisili.html" class="btn" onclick="setSuratType('Surat Keterangan Domisili')">Buat Surat</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+          <div class="card">
+              <div class="card-body text-center">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <hr style="margin: 15px 0;">
+                  <p class="card-text" style="font-weight: 450; font-size: 17px;">Surat Keterangan Usaha</p>
+                  <a href="surat usaha.html" class="btn" onclick="setSuratType('Surat Keterangan Usaha')">Buat Surat</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <hr style="margin: 15px 0;">
+                <p class="card-text" style="font-weight: 450; font-size: 17px;">Surat Keterangan</p>
+                <a href="surat keterangan.html" class="btn">Buat surat</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <hr style="margin: 15px 0;">
+                <p class="card-text" style="font-weight: 450; font-size: 17px;">Surat Keterangan Tidak Mampu</p>
+                <a href="surat tidak mampu.html" class="btn">Buat surat</a>
+            </div>
+        </div>
+    </div>
+  </div>
+  <div class="row mt-4">
+      <div class="col-md-5">
+          <div class="card">
+              <div class="card-body text-center">
+                  <i class="fa-solid fa-envelope-open-text"></i>
+                  <hr style="margin: 15px 0;">
+                  <p class="card-text" style="font-weight: 450; font-size: 17px;">Surat Keterangan Penghasilan Orang Tua</p>
+                  <a href="surat penghasilan orang tua.html" class="btn">Buat surat</a>
+              </div>
+          </div>
+      </div>
+      <div class="col-md-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <hr style="margin: 15px 0;">
+                <p class="card-text" style="font-weight: 450; font-size: 17px;">Surat Keterangan Duda</p>
+                <a href="surat duda.html" class="btn">Buat surat</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-3">
+        <div class="card">
+            <div class="card-body text-center">
+                <i class="fa-solid fa-envelope-open-text"></i>
+                <hr style="margin: 15px 0;">
+                <p class="card-text" style="font-weight: 450; font-size: 17px;">Surat Keterangan Janda</p>
+                <a href="surat janda.html" class="btn">Buat surat</a>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+
+
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="https://kit.fontawesome.com/36e1157cf2.js" crossorigin="anonymous"></script>
+
+</body>
+
+
+</html>
